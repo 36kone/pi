@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Carrinho - MenuFood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles/cart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container topbar__content">
+            <div class="logo">
+                <span class="logo__mark"></span>
+                <span class="logo__text">MenuFood</span>
+            </div>
+
+            <nav class="nav">
+                <a href="/pages/index.html" class="nav__link">Início</a>
+                <a href="#" class="nav__link">Categorias</a>
+                <a href="#" class="nav__link">Ofertas</a>
+                <a href="#" class="nav__link">Ajuda</a>
+            </nav>
+
+            <div class="topbar__actions">
+                <button class="cart-btn" type="button" onclick="openCart()">
+                    <span class="cart-btn__icon">🛒</span>
+                    <span class="cart-btn__badge" id="cart-count">0</span>
+                </button>
+
+                <a href="/pages/login.html" class="topbar__login-link">Entrar</a>
+                <a href="/pages/register.html" class="btn btn--primary">Cadastrar</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="cart-page">
+        <section class="cart">
+            <div class="container cart__container">
+                <header class="cart__header">
+                    <h1>Seu carrinho</h1>
+                    <p class="cart__subtitle">Revise seus itens antes de finalizar o pedido.</p>
+                </header>
+
+                <div class="cart-layout">
+                    <div class="cart-items">
+                        <div id="cart-empty" class="cart-empty">
+                            <div class="cart-empty__icon">🛒</div>
+                            <h2>Seu carrinho está vazio</h2>
+                            <p>Adicione pratos deliciosos aos seus pedidos e eles aparecerão aqui.</p>
+                            <a href="/pages/index.html" class="btn btn--ghost cart-empty__btn">
+                                Explorar restaurantes
+                            </a>
+                        </div>
+
+                        <div id="cart-items"></div>
+                    </div>
+
+                    <aside class="cart-summary">
+                        <h2>Resumo do pedido</h2>
+
+                        <div class="cart-summary__row">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal">R$ 0,00</span>
+                        </div>
+                        <div class="cart-summary__row">
+                            <span>Taxa de serviço</span>
+                            <span id="cart-fee">R$ 0,00</span>
+                        </div>
+                        <div class="cart-summary__row cart-summary__row--total">
+                            <span>Total</span>
+                            <span id="cart-total">R$ 0,00</span>
+                        </div>
+
+                        <button type="button" class="btn btn--primary btn--full cart-summary__btn">
+                            Finalizar pedido
+                        </button>
+
+                        <button type="button" class="cart-summary__clear" onclick="clearCart()">
+                            Limpar carrinho
+                        </button>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

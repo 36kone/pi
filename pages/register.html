@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Criar conta - MenuFood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles/register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container topbar__content">
+            <div class="logo">
+                <span class="logo__mark"></span>
+                <span class="logo__text">MenuFood</span>
+            </div>
+
+            <nav class="nav">
+                <a href="/pages/index.html" class="nav__link">Início</a>
+                <a href="#" class="nav__link">Categorias</a>
+                <a href="#" class="nav__link">Ofertas</a>
+                <a href="#" class="nav__link">Ajuda</a>
+            </nav>
+
+            <div class="topbar__actions">
+                <button class="cart-btn" type="button" onclick="openCart()">
+                    <span class="cart-btn__icon">🛒</span>
+                    <span class="cart-btn__badge" id="cart-count">0</span>
+                </button>
+
+                <a href="/pages/login.html" class="topbar__login-link">Entrar</a>
+                <a href="/pages/register.html" class="btn btn--primary">Cadastrar</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="login-page">
+        <div class="login-card">
+            <div class="login-card__header">
+                <div class="logo logo--center">
+                    <span class="logo__mark"></span>
+                    <span class="logo__text">MenuFood</span>
+                </div>
+                <h1>Crie sua conta</h1>
+                <p>Leva menos de um minuto para começar a explorar novos sabores.</p>
+            </div>
+
+            <form class="login-form" onsubmit="registerUser(event)">
+                <div class="form-group">
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Crie uma senha" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar senha</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repita a senha"
+                        required />
+                </div>
+
+                <div class="form-row form-row--terms">
+                    <label class="checkbox">
+                        <input type="checkbox" id="terms" required />
+                        <span>Concordo com os termos de uso e política de privacidade.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--full">
+                    Criar conta
+                </button>
+
+                <p class="login-form__footer">
+                    Já tem conta?
+                    <a href="/pages/login.html">Entrar</a>
+                </p>
+            </form>
+        </div>
+
+        <footer class="login-footer">
+            <span>© 2025 MenuFood. Todos os direitos reservados.</span>
+        </footer>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
