@@ -1,4 +1,3 @@
-/* RESET */
 *,
 *::before,
 *::after {
@@ -28,7 +27,7 @@ body {
     padding: 0 16px;
 }
 
-/* NAVBAR IGUAL ÀS OUTRAS PÁGINAS */
+/* NAVBAR */
 
 .topbar {
     position: sticky;
@@ -363,22 +362,29 @@ body {
     text-decoration: underline;
 }
 
-/* RESPONSIVO */
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .topbar__actions {
+        gap: 8px;
+    }
+
+    .cart {
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
+}
 
 @media (max-width: 900px) {
     .cart-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
 
-    .cart-item {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .cart-item__actions {
-        width: 100%;
-        justify-content: flex-end;
-        flex-wrap: wrap;
+    .cart-summary {
+        margin-top: 16px;
     }
 }
+

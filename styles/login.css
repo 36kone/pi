@@ -326,6 +326,21 @@ body {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .topbar__actions {
+        gap: 8px;
+    }
+
+    .login-page {
+        justify-content: flex-start;
+        padding-top: 24px;
+    }
+}
+
 @media (max-width: 480px) {
     .login-card {
         padding: 20px 16px 18px;

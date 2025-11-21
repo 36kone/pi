@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Status do Pedido - MenuFood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles/status_pedido.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container topbar__content">
+            <div class="logo">
+                <span class="logo__mark"></span>
+                <span class="logo__text">MenuFood</span>
+            </div>
+
+            <nav class="nav">
+                <a href="/pages/index.html" class="nav__link">Início</a>
+                <a href="#" class="nav__link">Categorias</a>
+                <a href="#" class="nav__link">Ofertas</a>
+                <a href="#" class="nav__link">Ajuda</a>
+            </nav>
+
+            <div class="topbar__actions">
+                <button class="cart-btn" type="button" onclick="openCart()">
+                    <span class="cart-btn__icon">🛒</span>
+                    <span class="cart-btn__badge" id="cart-count">0</span>
+                </button>
+
+                <a href="/pages/login.html" class="topbar__login-link">Entrar</a>
+                <a href="/pages/register.html" class="btn btn--primary">Cadastrar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="status-page">
+        <div class="status-card">
+            <div class="status-card__header">
+                <div class="status-card__title">
+                    <h1>Acompanhe seu pedido</h1>
+                    <p>Pedido <strong>#1234</strong> • Mendelini Pizzaria</p>
+                </div>
+
+                <div class="status-card__badge">
+                    <span class="status-pill status-pill--preparing">Em preparo</span>
+                    <span class="status-estimate">Previsão: 20–30 minutos</span>
+                </div>
+            </div>
+
+            <section class="status-timeline">
+                <div class="status-step status-step--done">
+                    <div class="status-step__icon"></div>
+                    <div class="status-step__content">
+                        <span class="status-step__title">Pedido recebido</span>
+                        <span class="status-step__subtitle">O restaurante já foi notificado.</span>
+                    </div>
+                    <span class="status-step__time">18:02</span>
+                </div>
+
+                <div class="status-step status-step--active">
+                    <div class="status-step__icon"></div>
+                    <div class="status-step__content">
+                        <span class="status-step__title">Em preparo</span>
+                        <span class="status-step__subtitle">Seu pedido está sendo preparado.</span>
+                    </div>
+                    <span class="status-step__time">Agora</span>
+                </div>
+
+                <div class="status-step">
+                    <div class="status-step__icon"></div>
+                    <div class="status-step__content">
+                        <span class="status-step__title">Pronto</span>
+                        <span class="status-step__subtitle">O pedido está pronto e aguardando retirada.</span>
+                    </div>
+                    <span class="status-step__time">—</span>
+                </div>
+
+                <div class="status-step">
+                    <div class="status-step__icon"></div>
+                    <div class="status-step__content">
+                        <span class="status-step__title">Entregue</span>
+                        <span class="status-step__subtitle">Bom apetite! 😋</span>
+                    </div>
+                    <span class="status-step__time">—</span>
+                </div>
+            </section>
+
+            <section class="status-info-grid">
+                <div class="status-info">
+                    <h2>Resumo do pedido</h2>
+                    <ul class="status-items">
+                        <li>
+                            <span class="status-items__name">Combo X-Salada</span>
+                            <span class="status-items__qty">1x</span>
+                            <span class="status-items__price">R$ 32,90</span>
+                        </li>
+                        <li>
+                            <span class="status-items__name">Batata frita média</span>
+                            <span class="status-items__qty">1x</span>
+                            <span class="status-items__price">R$ 14,90</span>
+                        </li>
+                        <li>
+                            <span class="status-items__name">Refrigerante lata</span>
+                            <span class="status-items__qty">1x</span>
+                            <span class="status-items__price">R$ 6,90</span>
+                        </li>
+                        <li class="status-items__total">
+                            <span>Total</span>
+                            <span>R$ 54,70</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="status-actions">
+                <button type="button" class="btn btn--ghost">
+                    Preciso de ajuda com o pedido
+                </button>
+                <a href="/pages/index.html" class="btn btn--primary">
+                    Voltar para o início
+                </a>
+            </div>
+        </div>
+
+        <footer class="status-footer">
+            <span>© 2025 MenuFood. Todos os direitos reservados.</span>
+        </footer>
+    </main>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

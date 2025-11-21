@@ -1,0 +1,457 @@
+/* RESET E BASE – IGUAL AO INDEX */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    background-color: #f7f7fb; /* igual index */
+    color: #111827;
+    line-height: 1.4;
+}
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* TOPBAR – COPIADO DO INDEX */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.topbar__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo__mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff5a3c, #ffb347);
+    box-shadow: 0 8px 16px rgba(255, 90, 60, 0.4);
+}
+
+.logo__text {
+    font-weight: 700;
+    font-size: 18px;
+    color: #111827;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav__link {
+    font-size: 14px;
+    color: #6b7280;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav__link:hover {
+    color: #111827;
+}
+
+.nav__link--active {
+    color: #111827;
+}
+
+.nav__link--active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 16px;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ff5a3c, #ffb347);
+}
+
+/* BOTÕES – IGUAIS AO INDEX */
+
+.btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
+    text-decoration: none;
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, #ff5a3c, #ff9f43);
+    color: #ffffff;
+    box-shadow: 0 8px 16px rgba(255, 90, 60, 0.35);
+}
+
+.btn--primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(255, 90, 60, 0.35);
+}
+
+.btn--ghost {
+    background: transparent;
+    color: #111827;
+}
+
+.btn--ghost:hover {
+    background-color: #f3f4f6;
+}
+
+/* BOTÃO DO CARRINHO – IGUAL AO INDEX (ESTILO COMPATÍVEL) */
+
+.cart-btn {
+    position: relative;
+    background-color: #f9fafb;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cart-btn__icon {
+    font-size: 16px;
+}
+
+.cart-btn__badge {
+    min-width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background-color: #ef4444;
+    color: #ffffff;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topbar__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* PÁGINA DE STATUS – ALINHADA COM O GRID DO INDEX */
+
+.status-page {
+    min-height: calc(100vh - 64px);
+    padding: 24px 0 24px;
+}
+
+.status-page > .status-card,
+.status-page > .status-footer {
+    /* como não tem .container no HTML, centralizamos via margin */
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* CARD DE STATUS */
+
+.status-card {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 20px 20px 18px;
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.12);
+}
+
+/* CABEÇALHO DO CARD */
+
+.status-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.status-card__title h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.status-card__title p {
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.status-card__badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-pill--preparing {
+    background: rgba(251, 146, 60, 0.12);
+    color: #ea580c;
+}
+
+.status-estimate {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* TIMELINE */
+
+.status-timeline {
+    border-radius: 16px;
+    background-color: #f9fafb;
+    padding: 16px 16px 8px;
+    margin-bottom: 20px;
+}
+
+.status-step {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px 12px;
+    align-items: flex-start;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.status-step::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    width: 2px;
+    height: calc(100% - 18px);
+    background: #e5e7eb;
+}
+
+.status-step:last-child::after {
+    display: none;
+}
+
+.status-step__icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    border: 2px solid #d1d5db;
+    background-color: #ffffff;
+    margin-top: 3px;
+    z-index: 1;
+}
+
+.status-step__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.status-step__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.status-step__subtitle {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.status-step__time {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* ESTADOS DA TIMELINE */
+
+.status-step--done .status-step__icon {
+    background: linear-gradient(135deg, #22c55e, #4ade80);
+    border-color: transparent;
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+}
+
+.status-step--done .status-step__title {
+    color: #16a34a;
+}
+
+.status-step--active .status-step__icon {
+    background: linear-gradient(135deg, #ff5a3c, #ff9f43);
+    border-color: transparent;
+    box-shadow: 0 0 0 2px rgba(251, 146, 60, 0.4);
+}
+
+.status-step--active .status-step__title {
+    color: #ea580c;
+}
+
+/* GRID DE INFORMAÇÕES */
+
+.status-info-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.status-info h2 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.status-info h3 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    color: #111827;
+}
+
+.status-info__text {
+    font-size: 13px;
+    color: #4b5563;
+}
+
+/* LISTA DE ITENS */
+
+.status-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.status-items li {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 8px;
+    font-size: 13px;
+    align-items: center;
+}
+
+.status-items__name {
+    color: #111827;
+}
+
+.status-items__qty {
+    color: #6b7280;
+}
+
+.status-items__price {
+    font-weight: 500;
+    color: #111827;
+}
+
+.status-items__total {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid #e5e7eb;
+    font-weight: 600;
+}
+
+/* AÇÕES */
+
+.status-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+/* RODAPÉ SIMPLES DA PÁGINA DE STATUS */
+
+.status-footer {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #6b7280;
+    text-align: center;
+}
+
+/* RESPONSIVIDADE – MESMO BREAKPOINT DO INDEX */
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .topbar__actions {
+        gap: 8px;
+    }
+
+    .status-card {
+        border-radius: 18px;
+        padding: 16px 14px 14px;
+    }
+
+    .status-card__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .status-card__badge {
+        align-items: flex-start;
+    }
+
+    .status-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .status-actions {
+        flex-direction: column;
+    }
+
+    .status-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
