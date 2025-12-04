@@ -25,6 +25,7 @@ body {
     padding: 24px 16px;
     justify-content: center;
     align-items: center;
+    
 }
 
 .login-card {
@@ -46,7 +47,7 @@ body {
 .logo__mark {
     width: 30px;
     height: 30px;
-    border-radius: 999px;
+    border-radius: 10px;
     background: linear-gradient(135deg, #ff5a3c, #ffb347);
     box-shadow: 0 8px 16px rgba(255, 90, 60, 0.4);
 }
