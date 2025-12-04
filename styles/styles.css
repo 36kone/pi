@@ -162,9 +162,13 @@ body {
 }
 
 .hero {
-    background: radial-gradient(circle at top left, #ffe9d5 0, #fff1e4 30%, #ffffff 60%);
-    border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
+    background: radial-gradient(
+        circle at top left,
+        #ff8a3c 0,      
+        #ffb347 30%,    
+        #ffe1c4 65%,    
+        #fff4e6 100%    
+    );
     padding: 32px 0 40px;
 }
 
@@ -233,8 +237,8 @@ body {
 
 .chip--active {
     border-color: transparent;
-    background: linear-gradient(135deg, #ff5a3c, #ffb347);
-    color: #111827;
+    background: black;
+    color: white;
 }
 
 .section {
@@ -411,17 +415,30 @@ body {
     margin-top: 32px;
 }
 
+.footer__top {
+    padding: 32px 0 20px;
+}
+
 .footer__content {
     display: flex;
     justify-content: space-between;
     gap: 32px;
-    padding: 32px 16px;
+    align-items: flex-start;
+}
+
+.footer__brand .logo__mark {
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.6);
+}
+
+.footer__brand .logo__text {
+    color: #f9fafb;
 }
 
 .footer__brand p {
     margin-top: 8px;
     max-width: 260px;
     font-size: 13px;
+    color: #9ca3af;
 }
 
 .footer__columns {
@@ -450,37 +467,36 @@ body {
 
 .footer__bottom {
     border-top: 1px solid #111827;
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
-.footer__bottom-content {
-    display: flex;
-    justify-content: space-between;
+.footer__bottom-text {
     font-size: 12px;
     color: #6b7280;
+    text-align: center;
+}
+.card {
+    flex: 0 0 280px;          
+}
+
+.card .card__image {
+    height: 180px;            
 }
 
 
 @media (max-width: 768px) {
-    .nav {
-        display: none;
-    }
-
-    .topbar__actions {
-        gap: 8px;
-    }
-
-    .hero {
-        border-radius: 0 0 24px 24px;
-    }
-
     .footer__content {
         flex-direction: column;
+        align-items: flex-start;
     }
 
-    .footer__bottom-content {
-        flex-direction: column;
-        gap: 4px;
+    .footer__columns {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 24px;
+    }
+
+    .footer__bottom-text {
         text-align: center;
     }
 }

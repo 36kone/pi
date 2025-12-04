@@ -1,43 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
+<head id="inicio">
     <meta charset="UTF-8" />
     <title>MendePizzaria</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="topbar">
-        <div class="container topbar__content">
-            <div class="logo"> <img class="logo__mark" src="/imgs/MENDE LOGO.jpeg_page-0001.jpg"
-                    alt="Logo Mendê Pizzaria">
-                <span class="logo__text">Mendê Pizzaria</span>
-            </div>
-
-            <nav class="nav">
-                <a href="#" class="nav__link nav__link--active">Início</a>
-                <a href="#" class="nav__link">Categorias</a>
-                <a href="#" class="nav__link">Ofertas</a>
-                <a href="#" class="nav__link">Eventos</a>
-                <a href="#" class="nav__link">Ajuda</a>
-            </nav>
-
-            <div class="topbar__actions">
-                <button class="cart-btn" type="button" onclick="openCart()">
-                    <span class="cart-btn__icon">🛒</span>
-                    <span class="cart-btn__badge" id="cart-count">0</span>
-                </button>
-
-                <a href="/pages/login.html" class="btn btn--ghost">Entrar</a>
-                <a href="/pages/register.html" class="btn btn--primary">Cadastrar</a>
-            </div>
-        </div>
-    </header>
+    <div id="navbar-container"></div>
 
     <main>
         <section class="hero">
@@ -66,7 +42,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="destaque">
             <div class="container">
                 <div class="section__header">
                     <h2>As mais pedidas</h2>
@@ -113,7 +89,7 @@
             </div>
         </section>
 
-        <section class="section section--alt">
+        <section class="section section--alt" id="cardapio">
             <div class="container">
                 <div class="section__header section__header--tabs">
                     <h2>Cardápio</h2>
@@ -127,70 +103,79 @@
                     </div>
                 </div>
 
-                <div class="cards-grid">
-                    <article class="card">
-                        <div class="card__image" style="background-image:url('/imgs/pizza\ panceta.jpeg');">
-                        </div>
-                        <div class="card__body">
-                            <h3>Pizzas de 30cm</h3>
-                            <div class="card__meta">
-                                <span>⭐ 4,9</span>
-                            </div>
-                        </div>
-                    </article>
+                <div class="carousel carousel--menu">
+                    <button class="carousel__control carousel__control--prev" aria-label="Anterior">
+                        ‹
+                    </button>
 
-                    <article class="card">
-                        <div class="card__image" style="background-image:url('/imgs/mini5.jpeg');">
-                        </div>
-                        <div class="card__body">
-                            <h3>Mini Pizzas</h3>
-                            <div class="card__meta">
-                                <span>⭐ 4,5</span>
-                            </div>
-                        </div>
-                    </article>
+                    <div class="carousel__viewport">
+                        <div class="carousel__track">
+                            <article class="card card">
+                                <div class="card__image" style="background-image:url('/imgs/pizza panceta.jpeg');">
+                                </div>
+                                <div class="card__body">
+                                    <h3>Pizzas de 30cm</h3>
+                                    <div class="card__meta">
+                                        <span>⭐ 4,9</span>
+                                    </div>
+                                </div>
+                            </article>
 
-                    <article class="card">
-                        <div class="card__image" style="background-image:url('/imgs/pdoce.jpeg');">
-                        </div>
-                        <div class="card__body">
-                            <h3>Pizzas Doce</h3>
-                            <div class="card__meta">
-                                <span>⭐ 4,8</span>
-                            </div>
-                        </div>
-                    </article>
+                            <article class="card card">
+                                <div class="card__image" style="background-image:url('/imgs/mini5.jpeg');"></div>
+                                <div class="card__body">
+                                    <h3>Mini Pizzas</h3>
+                                    <div class="card__meta">
+                                        <span>⭐ 4,5</span>
+                                    </div>
+                                </div>
+                            </article>
 
-                    <article class="card">
-                        <div class="card__image" style="background-image:url('/imgs/panuzzo.jpeg');">
-                        </div>
-                        <div class="card__body">
-                            <h3>Panuzzo</h3>
-                            <div class="card__meta">
-                                <span>⭐ 4,4</span>
-                            </div>
-                        </div>
-                    </article>
+                            <article class="card card">
+                                <div class="card__image" style="background-image:url('/imgs/pdoce.jpeg');"></div>
+                                <div class="card__body">
+                                    <h3>Pizzas Doce</h3>
+                                    <div class="card__meta">
+                                        <span>⭐ 4,8</span>
+                                    </div>
+                                </div>
+                            </article>
 
-                    <article class="card">
-                        <div class="card__image" style="background-image:url('/imgs/shared\ image\ \(6\).jpeg');">
+                            <article class="card card">
+                                <div class="card__image" style="background-image:url('/imgs/panuzzo.jpeg');"></div>
+                                <div class="card__body">
+                                    <h3>Panuzzo</h3>
+                                    <div class="card__meta">
+                                        <span>⭐ 4,4</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card card">
+                                <div class="card__image" style="background-image:url('/imgs/shared image (6).jpeg');">
+                                </div>
+                                <div class="card__body">
+                                    <h3>Bebidas</h3>
+                                    <p class="card__category">Drinks</p>
+                                    <div class="card__meta">
+                                        <span>⭐ 4,7</span>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
-                        <div class="card__body">
-                            <h3>Bebidas</h3>
-                            <p class="card__category">Drinks</p>
-                            <div class="card__meta">
-                                <span>⭐ 4,7</span>
-                            </div>
-                        </div>
-                    </article>
+                    </div>
+
+                    <button class="carousel__control carousel__control--next" aria-label="Próximo">
+                        ›
+                    </button>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="eventos">
             <div class="container">
                 <div class="section__header">
-                    <h2>De novo para você</h2>
+                    <h2>Eventos</h2>
                     <a href="#" class="section__link">Ver histórico</a>
                 </div>
 
@@ -201,48 +186,40 @@
 
                     <div class="carousel__viewport">
                         <div class="carousel__track">
-                            <article class="card card--small">
-                                <div class="card__image" style="background-image:url('/imgs/mini3.jpeg');">
+                            <article class="card card">
+                                <div class="card__image" style="background-image:url('/imgs/reserva_evento.jpeg');">
                                 </div>
                                 <div class="card__body">
-                                    <h3>4 Queijos</h3>
-                                    <p class="card__category">Mini</p>
+                                    <h3>Reserva</h3>
+                                    <p class="card__category">Reserva no nosso espaço</p>
                                 </div>
                             </article>
 
-                            <article class="card card--small">
-                                <div class="card__image" style="background-image:url('/imgs/mini\ 1.jpeg');">
+                            <article class="card card">
+                                <div class="card__image"
+                                    style="background-image:url('/imgs/pizza_na_sua_casa_evento.jpeg');">
                                 </div>
                                 <div class="card__body">
-                                    <h3>Abobrinha</h3>
-                                    <p class="card__category">Mini</p>
+                                    <h3>Pizza na sua casa</h3>
+                                    <p class="card__category">Vamos até a sua casa</p>
                                 </div>
                             </article>
 
-                            <article class="card card--small">
-                                <div class="card__image" style="background-image:url('/imgs/pizza\ panceta.jpeg');">
+                            <article class="card card">
+                                <div class="card__image" style="background-image:url('/imgs/festivais_evento.jpeg');">
                                 </div>
                                 <div class="card__body">
-                                    <h3>Panceta</h3>
-                                    <p class="card__category">30cm</p>
+                                    <h3>Festivais</h3>
+                                    <p class="card__category">Festivais gastronômicos</p>
                                 </div>
                             </article>
 
-                            <article class="card card--small">
-                                <div class="card__image" style="background-image:url('/imgs/panuzzo.jpeg');">
+                            <article class="card card">
+                                <div class="card__image" style="background-image:url('/imgs/reserva_evento.jpeg');">
                                 </div>
                                 <div class="card__body">
-                                    <h3>Panuzzo</h3>
-                                    <p class="card__category">Lanche</p>
-                                </div>
-                            </article>
-
-                            <article class="card card--small">
-                                <div class="card__image" style="background-image:url('/imgs/shared\ image.jpeg');">
-                                </div>
-                                <div class="card__body">
-                                    <h3>Drink</h3>
-                                    <p class="card__category">Bebidas</p>
+                                    <h3>Reserva</h3>
+                                    <p class="card__category">Reserva no nosso espaço</p>
                                 </div>
                             </article>
                         </div>
@@ -260,45 +237,49 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer__content">
-            <div class="footer__brand">
-                <div class="logo logo--center">
-            <img class="logo__mark" src="/imgs/MENDE LOGO.jpeg_page-0001.jpg" alt="Logo Mendê Pizzaria">
-            <span class="logo__text">Mendê Pizzaria</span>
-        </div>
-                <p>A melhor pizza de longa fermentação.</p>
-            </div>
+    <footer class="footer" id="ajuda">
+        <div class="footer__top">
+            <div class="container footer__content">
+                <div class="footer__brand">
+                    <div class="logo">
+                        <img class="logo__mark" src="/imgs/MENDE LOGO.jpeg_page-0001.jpg" alt="Logo Mendê Pizzaria">
+                        <span class="logo__text logo__text--invert">Mendê Pizzaria</span>
+                    </div>
+                    <p>A melhor pizza de longa fermentação.</p>
+                </div>
 
-            <div class="footer__columns">
-                <div class="footer__column">
-                    <h4>Sobre</h4>
-                    <a href="#">Quem somos</a>
-                    <a href="#">Eventos</a>
-                </div>
-                <div class="footer__column">
-                    <h4>Suporte</h4>
-                    <a href="#">Ajuda</a>
-                    <a href="#">Central de segurança</a>
-                    <a href="#">Fale conosco</a>
-                </div>
-                <div class="footer__column">
-                    <h4>Legal</h4>
-                    <a href="#">Termos de uso</a>
-                    <a href="#">Política de privacidade</a>
-                    <a href="#">Cookies</a>
+                <div class="footer__columns">
+                    <div class="footer__column">
+                        <h4>Sobre</h4>
+                        <a href="#">Quem somos</a>
+                        <a href="#">Eventos</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Suporte</h4>
+                        <a href="#">Ajuda</a>
+                        <a href="#">Central de segurança</a>
+                        <a href="#">Fale conosco</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Legal</h4>
+                        <a href="#">Termos de uso</a>
+                        <a href="#">Política de privacidade</a>
+                        <a href="#">Cookies</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="footer__bottom">
-            <div class="container footer__bottom-content">
-                <span>© 2025 Mendê Pizzaria
+            <div class="container">
+                <p class="footer__bottom-text">
+                    © 2025 Mendê Pizzaria. Todos os direitos reservados.
+                </p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="../js/main.js"></script>
 </body>
 
 </html>
